@@ -59,16 +59,15 @@ header {
     font-family: 'Noto Sans', sans-serif;
     background-image: url(assets/jumbo.jpg);
     background-size: cover;
-    text-align: center;
+    text-align: left;
     height: 720px;
 }
 
 .text-center {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
+    top: 30%;
+    margin-left: 30px;
+    color: #212A40;
     z-index: 1;
 }
 
@@ -79,32 +78,33 @@ header {
 .cta {
     position: absolute;
     top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin-left: 30px;
     margin-top: 30px;
     z-index: 1;
 }
 
 .jumbotron-button {
     text-decoration: none;
-    border: 2px solid #007bc1;
-    border-radius: 3px;
+    border-radius: 6px;
     color: white;
     padding: 15px 18px;
     text-transform: uppercase;
+    background-color: #3E82E3;
+    box-shadow: 1px 5px #dddddd;
 }
 
 .jumbotron-button:hover {
     color: #007bc1;
     background-color: white;
+    border: 2px solid #007bc1;
 }
 
-.color-overlay {
+/* .color-overlay {
     background: #007bc1;
     height: 100%;
     width: 100%;
     opacity: 0.4;
-}
+} */
 
 body {
     background-color: #e5e5e5;
