@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 
 * {
     margin: 0;
     padding: 0;
+    outline: none;
+    box-sizing: border-box;
 }
 
 header {
@@ -99,19 +102,13 @@ header {
     border: 2px solid #007bc1;
 }
 
-/* .color-overlay {
-    background: #007bc1;
-    height: 100%;
-    width: 100%;
-    opacity: 0.4;
-} */
-
 body {
-    background-color: #e5e5e5;
+    background-color: white;
 }
 
 .content {
     font-family: 'Noto Sans', sans-serif;
+    background-color: white;
 }
 
 .highlight-text {
@@ -123,13 +120,70 @@ body {
     margin: 20px 5px;
 }
 
+.wrapper {
+    width: 250px;
+    background: white;
+    padding: 10px;
+    box-shadow: 0px 0px 10px grey;
+}
+
+.wrapper .input-data {
+    height: 40px;
+    width: 100%;
+    position: relative;
+}
+
+.wrapper .input-data input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 17px;
+    font-family: 'Noto Sans', sans-serif;
+    border-bottom: 2px solid #4158d0;
+}
+
+.input-data input:focus~label,
+.input-data input:valid~label {
+    transform: translateY(-20px);
+    font-size: 15px;
+    color: #4158d0;
+}
+
+.wrapper .input-data label {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: grey;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.wrapper .input-data .underline {
+    position: absolute;
+    bottom: 0px;
+    height: 2px;
+    width: 100%;
+}
+
+.input-data .underline:before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #4158d0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.input-data input:focus~.underline::before,
+.input-data input:valid~.underline::before {
+    transform: scaleX(1);
+}
+
 .card {
-    border: 1px solid #007bc1;
     border-radius: 3px;
-    padding: 10px 10px;
-    margin: 10px 10px;
-    width: 350px;
-    height: 150px;
+    margin: 5px 5px;
+    width: 250px;
     float: left;
     text-align: justify;
 }
@@ -190,12 +244,12 @@ body {
     color: whitesmoke;
 }
 
-input {
+/* input {
     width: 400px;
     height: 30px;
     margin: 8px 20px;
     padding: 0 10px;
-}
+} */
 
 .news-panel p a {
     text-decoration: none;
