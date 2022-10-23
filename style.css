@@ -13,43 +13,6 @@ header {
     display: inline;
 }
 
-.notif-panel {
-    position: fixed;
-    top: -100%;
-    left: 0;
-    right: 0;
-    background-color: white;
-    padding: 5px 0;
-    transition: 1000ms;
-    z-index: 3;
-
-}
-
-.notif-panel.active {
-    top: 0;
-}
-
-.notif-panel p {
-    font-family: 'Noto Sans', sans-serif;
-    margin: 8px 10px;
-    text-align: left;
-
-}
-
-.notif-panel p a {
-    text-decoration: none;
-}
-
-.notif-button {
-    background-color: #007bc1;
-    border: 0;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 3px;
-    margin: 5px 10px;
-    cursor: pointer;
-}
-
 .logo {
     width: 150px;
     height: 150px;
@@ -235,6 +198,10 @@ body {
     box-shadow: 0px 0px 10px grey;
     font-family: 'Noto Sans', sans-serif;
     color: #004a75;
+}
+
+.requirement h3 {
+    text-align: center;
 }
 
 footer {
