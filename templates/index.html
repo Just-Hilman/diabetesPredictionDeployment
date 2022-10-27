@@ -7,18 +7,18 @@
 
     <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
     <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <title> Diabetes Prediction | Install Dance</title>
 </head>
 <body>
     <header>
-        <img class="logo" src="assets/logo.png" alt="">
+        <img class="logo" src="/static/assets/logo.png" alt="">
         
         <!-- Jumbotron -->
         <div class="jumbotron">
             <div class="text-center">
                 <h1>Serving Your <br> Health Needs Is <br> Our Priority.</h1>
-                <p>Have something great in mind? Feel free to contact us. <br>
-                    I'll help you to make it happen.</p>
+                <p>Have something great in mind? <br>Feel free to contact us.</p>
             </div>
             <div class="cta">
                 <a href="#result" class="jumbotron-button">Let's Make Contact</a>
@@ -38,87 +38,135 @@
                 </h5>
             </div>
             
+            <form action="{{url_for('predict')}}" method="post">
+                <article id="consult" class="card">
+                    <div class="wrapper">
+                        <div class="input-data">
+                            <input type="text" name="Pregnancies" required>
+                            <div class="underline"></div>
+                            <label>Pregnancies</label>
+                        </div>
+                    </div>
+                </article>
+                <article id="design" class="card">
+                    <div class="wrapper">
+                        <div class="input-data">
+                            <input type="text" name="Glucose" required>
+                            <div class="underline"></div>
+                            <label>Glucose</label>
+                        </div>
+                    </div>
+                </article>
+                <article id="develop" class="card">
+                    <div class="wrapper">
+                        <div class="input-data">
+                            <input type="text" name="BloodPressure" required>
+                            <div class="underline"></div>
+                            <label>Blood Pressure</label>
+                        </div>
+                    </div>
+                </article>
+                <article id="marketing" class="card">
+                    <div class="wrapper">
+                        <div class="input-data">
+                            <input type="text" name="SkinThickness" required>
+                            <div class="underline"></div>
+                            <label>Skin Thickness</label>
+                        </div>
+                    </div>
+                </article>
+                <article id="manage" class="card">
+                    <div class="wrapper">
+                        <div class="input-data">
+                            <input type="text" name="Insulin" required>
+                            <div class="underline"></div>
+                            <label>Insulin</label>
+                        </div>
+                    </div>
+                </article>
+                <article id="evolve" class="card">
+                    <div class="wrapper">
+                        <div class="input-data">
+                            <input type="text" name="BMI" required>
+                            <div class="underline"></div>
+                            <label>BMI</label>
+                        </div>
+                    </div>
+                </article>
+                <article id="evolve" class="card">
+                    <div class="wrapper">
+                        <div class="input-data">
+                            <input type="text" name="DiabetesPedigreeFunction" required>
+                            <div class="underline"></div>
+                            <label>Diabetes Pedigree Function</label>
+                        </div>
+                    </div>
+                </article>
+                <article id="evolve" class="card">
+                    <div class="wrapper">
+                        <div class="input-data">
+                            <input type="text" name="Age" required>
+                            <div class="underline"></div>
+                            <label>Age</label>
+                        </div>
+                    </div>
+                </article>
 
-            <article id="consult" class="card">
-                <div class="wrapper">
-                    <div class="input-data">
-                        <input type="text" required>
-                        <div class="underline"></div>
-                        <label>Pregnancies</label>
+                <article id="evolve" class="card2">
+                    <div class="wrapper2">
+                        <div class="input-data2">
+                            <input type="text" name="NF_BMI" required>
+                            <div class="underline"></div>
+                            <label>BMI Classification</label>
+                        </div>
                     </div>
-                </div>
-            </article>
-            <article id="design" class="card">
-                <div class="wrapper">
-                    <div class="input-data">
-                        <input type="text" required>
-                        <div class="underline"></div>
-                        <label>Glucose</label>
+                </article>
+                <article id="evolve" class="card2">
+                    <div class="wrapper2">
+                        <div class="input-data2">
+                            <input type="text" name="NF_Insulin_Normal" required>
+                            <div class="underline"></div>
+                            <label>Normal Insulin</label>
+                        </div>
                     </div>
-                </div>
-            </article>
-            <article id="develop" class="card">
-                <div class="wrapper">
-                    <div class="input-data">
-                        <input type="text" required>
-                        <div class="underline"></div>
-                        <label>Blood Pressure</label>
+                </article>
+                <article id="evolve" class="card2">
+                    <div class="wrapper2">
+                        <div class="input-data2">
+                            <input type="text" name="NF_Insulin_Tidak Normal" required>
+                            <div class="underline"></div>
+                            <label>Not Normal Insulin</label>
+                        </div>
                     </div>
-                </div>
-            </article>
-            <article id="marketing" class="card">
-                <div class="wrapper">
-                    <div class="input-data">
-                        <input type="text" required>
-                        <div class="underline"></div>
-                        <label>Skin Thickness</label>
+                </article>
+                <article id="evolve" class="card2">
+                    <div class="wrapper2">
+                        <div class="input-data2">
+                            <input type="text" name="NF_Glucose_Berpotensi" required>
+                            <div class="underline"></div>
+                            <label>Glucose Berpotensi</label>
+                        </div>
                     </div>
-                </div>
-            </article>
-            <article id="manage" class="card">
-                <div class="wrapper">
-                    <div class="input-data">
-                        <input type="text" required>
-                        <div class="underline"></div>
-                        <label>Insulin</label>
+                </article>
+                <article id="evolve" class="card2">
+                    <div class="wrapper2">
+                        <div class="input-data2">
+                            <input type="text" name="NF_Glucose_Tidak Potensi" required>
+                            <div class="underline"></div>
+                            <label>Glucose Tidak Berpotensi</label>
+                        </div>
                     </div>
+                </article>
+
+                <div class="predict">
+                    <button type="submit" class="predict-btn">Predict</button>
                 </div>
-            </article>
-            <article id="evolve" class="card">
-                <div class="wrapper">
-                    <div class="input-data">
-                        <input type="text" required>
-                        <div class="underline"></div>
-                        <label>BMI</label>
-                    </div>
-                </div>
-            </article>
-            <article id="evolve" class="card">
-                <div class="wrapper">
-                    <div class="input-data">
-                        <input type="text" required>
-                        <div class="underline"></div>
-                        <label>Diabetes Pedigree Function</label>
-                    </div>
-                </div>
-            </article>
-            <article id="evolve" class="card">
-                <div class="wrapper">
-                    <div class="input-data">
-                        <input type="text" required>
-                        <div class="underline"></div>
-                        <label>Age</label>
-                    </div>
-                </div>
-            </article>
+            </form>
 
             <div class="clear"></div>
         </div>
 
-        <div class="predict">
-            <!-- <a href="#" class="predict-btn">Predict</a> -->
-            <button class="predict-btn">Predict</button>
-        </div>
+        
 
         <div id="result">
             <article id="manage" class="requirement">
@@ -131,13 +179,14 @@
                     <li><b>BMI</b> Body Mass Index  (<b>weight in kg/(height in m)^2</b>)</li><br>
                     <li><b>Diabetes Pedigree Function</b> Diabetes Pedigree Function</li><br>
                     <li><b>Age</b> Number of Years (Written in <b>years</b>)</li><br>
+                    <li><b>BMI Classification</b> Kurus( < 18.5) | Normal (18.5-25.0) | Gemuk 1(25.1-27.0) | Gemuk 2(> 27.0</18.5>) <b>years</b>)</li><br>
+                    <li><b>Insulin</b> Insulin Normal = 1 | Tidak Normal = 0</li><br>
+                    <li><b>Glucose</b> Berpotensi = 1 | Tidak Berpotensi = 0</li><br>
             </article>
-            <article id="manage" class="requirement">
+            <article id="manage" class="requirement2">
                 <h3>RESULT</h3>
-                <p>Change-makers innovation or shared unit of analysis. Overcome injustice
-                    outcomes strategize vibrant boots on the ground sustainable. Optimism,
-                    effective altruism invest optimism corporate social.
-                </p>
+                <h4>{{prediction_text}}</h4>
+                
             </article>
         </div>
     </main>
@@ -145,7 +194,5 @@
     <footer>
         <p> &#169; 2022 Install Dance. All Right Reserved.</p>
     </footer>
-
-    <script src="main.js"></script>
 </body>
 </html>
