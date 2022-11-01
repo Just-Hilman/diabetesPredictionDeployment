@@ -1,6 +1,6 @@
 # diabetesPredictionDeployment
 
-Application that can help predict wheter a woman has diabetes or not
+Application that can help predict whether a woman has diabetes or not
 
 ### Configure
 
